@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
-        // Générer la liste des participants
+        // Generate the participant list
         let participantsHTML = "";
         if (details.participants.length > 0) {
           participantsHTML = `
             <div class="participants-section">
-              <strong>Participants inscrits :</strong>
+              <strong>Registered Participants:</strong>
               <ul class="participants-list">
                 ${details.participants.map(email => `<li>${email}</li>`).join("")}
               </ul>
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           participantsHTML = `
             <div class="participants-section">
-              <strong>Participants inscrits :</strong>
-              <p class="no-participants">Aucun participant pour le moment.</p>
+              <strong>Registered Participants:</strong>
+              <p class="no-participants">No participants yet.</p>
             </div>
           `;
         }
